@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Theme Switcher Construct</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-theme="standard">
+  <header class="site-header">
+    <a class="site-logo" href="#" aria-label="Made by D.S.">
+      Made by<span>D.S.</span>
+    </a>
+
+    <div class="header-actions">
+      <span class="header-caption">Appearance</span>
+
+      <div class="theme-switcher" id="site-theme-switcher">
+        <button
+          class="theme-trigger"
+          id="theme-switcher-trigger"
+          type="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="theme-switcher-menu"
+        >
+          <span class="trigger-icon" aria-hidden="true">◐</span>
+          <span class="trigger-label">Choose theme</span>
+          <span class="trigger-chevron" aria-hidden="true">⌄</span>
+        </button>
+
+        <div
+          class="theme-menu"
+          id="theme-switcher-menu"
+          role="group"
+          aria-label="Choose a colour theme"
+          hidden
+        >
+          <p class="menu-eyebrow">PERSONALISE YOUR SPACE</p>
+
+          <button
+            class="theme-option"
+            type="button"
+            data-theme="standard"
+            aria-pressed="true"
+          >
+            <span class="theme-swatches" aria-hidden="true">
+              <i></i><i></i><i></i>
+            </span>
+            <span class="option-copy">
+              <strong>Standard</strong>
+              <small>Balanced and familiar</small>
+            </span>
+            <span class="option-check" aria-hidden="true">✓</span>
+          </button>
+
+          <button
+            class="theme-option"
+            type="button"
+            data-theme="light"
+            aria-pressed="false"
+          >
+            <span class="theme-swatches swatches-light" aria-hidden="true">
+              <i></i><i></i><i></i>
+            </span>
+            <span class="option-copy">
+              <strong>Light</strong>
+              <small>Bright and clean</small>
+            </span>
+            <span class="option-check" aria-hidden="true">✓</span>
+          </button>
+
+          <button
+            class="theme-option"
+            type="button"
+            data-theme="dark"
+            aria-pressed="false"
+          >
+            <span class="theme-swatches swatches-dark" aria-hidden="true">
+              <i></i><i></i><i></i>
+            </span>
+            <span class="option-copy">
+              <strong>Dark</strong>
+              <small>Easy on the eyes</small>
+            </span>
+            <span class="option-check" aria-hidden="true">✓</span>
+          </button>
+
+          <button
+            class="theme-option"
+            type="button"
+            data-theme="halloween"
+            aria-pressed="false"
+          >
+            <span class="theme-swatches swatches-halloween" aria-hidden="true">
+              <i></i><i></i><i></i>
+            </span>
+            <span class="option-copy">
+              <strong>Halloween</strong>
+              <small>Midnight and pumpkin</small>
+            </span>
+            <span class="option-check" aria-hidden="true">✓</span>
+          </button>
+
+          <button
+            class="theme-option"
+            type="button"
+            data-theme="christmas"
+            aria-pressed="false"
+          >
+            <span class="theme-swatches swatches-christmas" aria-hidden="true">
+              <i></i><i></i><i></i>
+            </span>
+            <span class="option-copy">
+              <strong>Christmas</strong>
+              <small>Evergreen and festive</small>
+            </span>
+            <span class="option-check" aria-hidden="true">✓</span>
+          </button>
+
+          <button
+            class="theme-option"
+            type="button"
+            data-theme="space-blue"
+            aria-pressed="false"
+          >
+            <span class="theme-swatches swatches-space" aria-hidden="true">
+              <i></i><i></i><i></i>
+            </span>
+            <span class="option-copy">
+              <strong>Space Blue</strong>
+              <small>Cosmic blue depths</small>
+            </span>
+            <span class="option-check" aria-hidden="true">✓</span>
+          </button>
+
+          <button
+            class="theme-option"
+            type="button"
+            data-theme="green-gibberish"
+            aria-pressed="false"
+          >
+            <span class="theme-swatches swatches-green" aria-hidden="true">
+              <i></i><i></i><i></i>
+            </span>
+            <span class="option-copy">
+              <strong>Green Gibberish</strong>
+              <small>Electric green energy</small>
+            </span>
+            <span class="option-check" aria-hidden="true">✓</span>
+          </button>
+
+          <p class="menu-footnote">
+            Your choice is saved on this device.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <section class="hero">
+      <p class="eyebrow">
+        <span class="eyebrow-dot"></span>
+        YOUR SPACE, YOUR STYLE
+      </p>
+
+      <h1>
+        A little change.<br>
+        <span>A whole new feeling.</span>
+      </h1>
+
+      <p class="hero-copy">
+        Explore seven carefully designed colour themes.
+        Pick the atmosphere that feels right for you.
+      </p>
+
+      <div class="hero-actions">
+        <button
+          class="button button-primary"
+          id="demo-open-theme"
+          type="button"
+        >
+          Explore themes
+          <span aria-hidden="true">↗</span>
+        </button>
+
+        <a class="text-link" href="#preview">
+          See the preview
+          <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+
+      <div class="trust-row">
+        <span aria-hidden="true">✳</span>
+        Seven themes
+        <span class="trust-separator">·</span>
+        Keyboard friendly
+        <span class="trust-separator">·</span>
+        No external assets
+      </div>
+    </section>
+
+    <section
+      class="preview-section"
+      id="preview"
+      aria-labelledby="preview-title"
+    >
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">LIVE PREVIEW</p>
+          <h2 id="preview-title">Designed around you</h2>
+        </div>
+
+        <span class="preview-badge">
+          <span></span>
+          Interactive demo
+        </span>
+      </div>
+
+      <div class="preview-grid">
+        <article class="preview-card feature-card">
+          <div class="feature-top">
+            <span class="feature-icon" aria-hidden="true">✦</span>
+            <span class="card-kicker">YOUR DASHBOARD</span>
+            <span class="more-dots" aria-hidden="true">•••</span>
+          </div>
+
+          <h3>Make it yours.</h3>
+
+          <p>
+            Small details can change the way a whole experience feels.
+            Find your favourite palette and make yourself at home.
+          </p>
+
+          <div class="mini-stat-row">
+            <div>
+              <strong>07</strong>
+              <span>Colour themes</span>
+            </div>
+
+            <div>
+              <strong>01</strong>
+              <span>Personal style</span>
+            </div>
+
+            <div>
+              <strong>∞</strong>
+              <span>Possibilities</span>
+            </div>
+          </div>
+
+          <button
+            class="button button-primary"
+            type="button"
+            id="demo-card-theme"
+          >
+            Change the mood
+            <span aria-hidden="true">→</span>
+          </button>
+        </article>
+
+        <article class="preview-card palette-card">
+          <div class="card-heading">
+            <div>
+              <p class="card-kicker">COLOUR PALETTE</p>
+              <h3>Current mood</h3>
+            </div>
+
+            <span class="palette-spark" aria-hidden="true">✳</span>
+          </div>
+
+          <p class="muted-copy">
+            A palette to match your moment.
+          </p>
+
+          <div
+            class="palette-bars"
+            aria-label="Decorative palette preview"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <div class="palette-labels">
+            <span>Primary</span>
+            <span>Accent</span>
+            <span>Surface</span>
+          </div>
+
+          <div class="quote-box">
+            <span aria-hidden="true">"</span>
+            <p>
+              Design is how it feels to use a space, not just how it looks.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>Made by D.S.</span>
+      <span>Built for a more personal web.</span>
+    </footer>
+
+    <p
+      class="visually-hidden"
+      id="theme-switcher-status"
+      role="status"
+      aria-live="polite"
+    >
+      Standard theme active
+    </p>
+  </main>
+</body>
+</html>
