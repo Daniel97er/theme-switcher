@@ -1,4 +1,4 @@
-# Theme Switcher
+# Theme Switcher Demo
 
 A lightweight, reusable website theme switcher built with HTML, CSS, and vanilla JavaScript.
 
@@ -34,8 +34,11 @@ Some adjustments may be necessary to match your website's existing structure and
 
 To create this Code I have use the help of AI. 
 
+I am not a professional programmer so please test this programm before you use it. 
 
-### Demo 
+### The integrable version is in the integrable-theme-switcher directory.
+
+#### Demo 
 <img width="1600" height="2412" alt="1000016092" src="https://github.com/user-attachments/assets/2a18444a-aa14-4d97-99f1-a8e9884913ae" />
 <br>
 
